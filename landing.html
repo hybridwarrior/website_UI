@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Boxing AI - Transform Your Boxing Journey with AI-Powered Coaching</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience personalized AI boxing coaching with Oracle Boxing AI. Get real-time technique analysis, customized training plans, and expert guidance from multiple AI coach personas.">
+    <meta name="keywords" content="AI boxing coach, boxing training, personalized coaching, boxing techniques, fitness AI, boxing improvement">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Oracle Boxing AI - AI-Powered Boxing Coach">
+    <meta property="og:description" content="Transform your boxing skills with personalized AI coaching. Real-time feedback, progress tracking, and expert guidance.">
+    <meta property="og:image" content="/assets/images/og-image.png">
+    <meta property="og:type" content="website">
+    
+    <!-- CSS Framework and Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-rajdhani { font-family: 'Rajdhani', sans-serif; }
+        
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Animated Gradient Background */
+        .animated-gradient {
+            background: linear-gradient(-45deg, #1e1e1e, #2d2d2d, #1a1a1a, #3a3a3a);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Hero Animation */
+        .hero-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Card Hover Effect */
+        .feature-card {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            border-color: #ef4444;
+            box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.1), 0 10px 10px -5px rgba(239, 68, 68, 0.04);
+        }
+        
+        /* Pulse Animation for CTA */
+        .pulse-border {
+            animation: pulse-border 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            50% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+        }
+        
+        /* Smooth Scroll */
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-fist-raised text-white text-xl"></i>
+                    </div>
+                    <span class="font-rajdhani font-bold text-2xl">Oracle Boxing AI</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Features</a>
+                    <a href="#coaches" class="text-gray-700 hover:text-red-600 font-medium transition-colors">AI Coaches</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-red-600 font-medium transition-colors">How It Works</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Success Stories</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-red-600 font-medium transition-colors">Pricing</a>
+                    <a href="/index.html" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors font-medium">
+                        Get Started
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-700" onclick="toggleMobileMenu()">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="container mx-auto px-4 py-4 space-y-3">
+                <a href="#features" class="block text-gray-700 hover:text-red-600 font-medium">Features</a>
+                <a href="#coaches" class="block text-gray-700 hover:text-red-600 font-medium">AI Coaches</a>
+                <a href="#how-it-works" class="block text-gray-700 hover:text-red-600 font-medium">How It Works</a>
+                <a href="#testimonials" class="block text-gray-700 hover:text-red-600 font-medium">Success Stories</a>
+                <a href="#pricing" class="block text-gray-700 hover:text-red-600 font-medium">Pricing</a>
+                <a href="/index.html" class="block bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-700 text-center font-medium">
+                    Get Started
+                </a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="pt-24 pb-20 px-4 animated-gradient text-white overflow-hidden">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center min-h-[600px]">
+                <!-- Hero Content -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                        <span class="text-sm">AI-Powered Training Available 24/7</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+                        Transform Your Boxing with
+                        <span class="text-red-400">Personalized AI Coaching</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 leading-relaxed">
+                        Experience the future of boxing training. Our AI coaches analyze your technique in real-time, 
+                        create personalized training plans, and guide you to championship-level performance.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="/index.html" class="bg-red-600 text-white px-8 py-4 rounded-lg hover:bg-red-700 transition-all transform hover:scale-105 font-medium text-lg pulse-border inline-flex items-center justify-center">
+                            Start Training Now
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="#how-it-works" class="bg-white/10 backdrop-blur-sm text-white px-8 py-4 rounded-lg hover:bg-white/20 transition-all font-medium text-lg inline-flex items-center justify-center">
+                            <i class="fas fa-play-circle mr-2"></i>
+                            Watch Demo
+                        </a>
+                    </div>
+                    
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center space-x-6 pt-4">
+                        <div class="flex -space-x-2">
+                            <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-white"></div>
+                            <div class="w-10 h-10 rounded-full bg-gray-400 border-2 border-white"></div>
+                            <div class="w-10 h-10 rounded-full bg-gray-500 border-2 border-white"></div>
+                            <div class="w-10 h-10 rounded-full bg-gray-600 border-2 border-white"></div>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-300">Trusted by <span class="font-bold text-white">10,000+</span> boxers worldwide</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Hero Visual -->
+                <div class="relative hero-float">
+                    <div class="relative w-full max-w-lg mx-auto">
+                        <!-- Glowing Effect -->
+                        <div class="absolute inset-0 bg-red-600 rounded-full blur-3xl opacity-20"></div>
+                        
+                        <!-- Main Visual -->
+                        <div class="relative bg-gradient-to-br from-red-600 to-red-700 rounded-2xl p-8 shadow-2xl">
+                            <div class="grid grid-cols-2 gap-4">
+                                <!-- AI Coach Cards -->
+                                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform rotate-3">
+                                    <i class="fas fa-brain text-3xl text-white mb-2"></i>
+                                    <p class="text-sm font-medium">AI Analysis</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform -rotate-3">
+                                    <i class="fas fa-chart-line text-3xl text-white mb-2"></i>
+                                    <p class="text-sm font-medium">Progress Tracking</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform -rotate-3">
+                                    <i class="fas fa-dumbbell text-3xl text-white mb-2"></i>
+                                    <p class="text-sm font-medium">Custom Plans</p>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-sm rounded-lg p-4 transform rotate-3">
+                                    <i class="fas fa-comments text-3xl text-white mb-2"></i>
+                                    <p class="text-sm font-medium">24/7 Support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-y border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">10,000+</div>
+                    <div class="text-gray-600">Active Boxers</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">500K+</div>
+                    <div class="text-gray-600">Training Sessions</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">98%</div>
+                    <div class="text-gray-600">Improvement Rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-red-600 mb-2">4.9/5</div>
+                    <div class="text-gray-600">User Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Everything You Need to
+                    <span class="gradient-text">Master Boxing</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Our comprehensive AI-powered platform provides all the tools and guidance you need to elevate your boxing skills
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-video text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Real-Time Technique Analysis</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our AI analyzes your form and technique in real-time, providing instant feedback on stance, 
+                        punches, footwork, and defensive movements.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Posture correction</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Punch accuracy analysis</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Movement optimization</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Multiple AI Coach Personas</h3>
+                    <p class="text-gray-600 mb-4">
+                        Train with specialized AI coaches, each focusing on different aspects of your boxing development 
+                        for comprehensive improvement.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Technical Master</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Motivational Coach</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Safety Expert</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Advanced Progress Tracking</h3>
+                    <p class="text-gray-600 mb-4">
+                        Monitor your improvement with detailed analytics, performance metrics, and visual progress 
+                        reports that show your journey.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Skill progression charts</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Training consistency</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Performance insights</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-calendar-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Personalized Training Plans</h3>
+                    <p class="text-gray-600 mb-4">
+                        Get custom workout routines tailored to your skill level, goals, and available time, 
+                        adapting as you progress.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Beginner to pro levels</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Goal-oriented programs</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Flexible scheduling</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Injury Prevention Focus</h3>
+                    <p class="text-gray-600 mb-4">
+                        Our Safety Expert AI monitors your form to prevent injuries, ensuring you train hard 
+                        while staying safe and healthy.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Form correction alerts</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Rest recommendations</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Warm-up routines</li>
+                    </ul>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-16 h-16 bg-red-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Train Anywhere, Anytime</h3>
+                    <p class="text-gray-600 mb-4">
+                        Access your AI coach from any device. Train at home, in the gym, or on the go with 
+                        our responsive platform.
+                    </p>
+                    <ul class="space-y-2 text-gray-600">
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Mobile optimized</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Offline mode</li>
+                        <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Cloud sync</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Coaches Section -->
+    <section id="coaches" class="py-20 px-4 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Meet Your <span class="text-red-400">AI Coaching Team</span>
+                </h2>
+                <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                    Each AI coach specializes in different aspects of boxing, providing comprehensive guidance for your complete development
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Coach 1 -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Technical Master</h3>
+                    <p class="text-gray-400 mb-4">
+                        Expert in boxing techniques, form, and mechanics. Provides detailed analysis of your stance, 
+                        punches, and defensive movements.
+                    </p>
+                    <div class="text-sm text-gray-500">
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Technique</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Form</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full">Precision</span>
+                    </div>
+                </div>
+                
+                <!-- Coach 2 -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-gradient-to-br from-red-500 to-red-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-fire text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Motivational Coach</h3>
+                    <p class="text-gray-400 mb-4">
+                        Keeps you inspired and mentally strong. Provides encouragement, mindset training, and helps 
+                        you push through barriers.
+                    </p>
+                    <div class="text-sm text-gray-500">
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Motivation</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Mindset</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full">Energy</span>
+                    </div>
+                </div>
+                
+                <!-- Coach 3 -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-gradient-to-br from-green-500 to-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-shield-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Safety Expert</h3>
+                    <p class="text-gray-400 mb-4">
+                        Focuses on injury prevention and proper recovery. Monitors your form to ensure safe training 
+                        practices and longevity.
+                    </p>
+                    <div class="text-sm text-gray-500">
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Safety</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Recovery</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full">Health</span>
+                    </div>
+                </div>
+                
+                <!-- Coach 4 -->
+                <div class="bg-gray-800 rounded-xl p-6 text-center hover:bg-gray-700 transition-colors">
+                    <div class="w-24 h-24 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Performance Analyst</h3>
+                    <p class="text-gray-400 mb-4">
+                        Tracks your progress with data-driven insights. Provides detailed analytics and personalized 
+                        improvement strategies.
+                    </p>
+                    <div class="text-sm text-gray-500">
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Analytics</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full mb-2">Progress</span>
+                        <span class="inline-block bg-gray-700 px-3 py-1 rounded-full">Strategy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Start Your Journey in
+                    <span class="gradient-text">3 Simple Steps</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Getting started with Oracle Boxing AI is quick and easy. Begin your transformation today.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="relative mb-8">
+                        <div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto">
+                            1
+                        </div>
+                        <div class="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gray-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sign Up & Set Goals</h3>
+                    <p class="text-gray-600">
+                        Create your account in seconds and tell us about your boxing experience and goals. 
+                        Our AI will create a personalized starting point.
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="relative mb-8">
+                        <div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto">
+                            2
+                        </div>
+                        <div class="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gray-300"></div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Start Training</h3>
+                    <p class="text-gray-600">
+                        Begin your first session with your AI coach. Get real-time feedback on your technique 
+                        and follow your customized training plan.
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="relative mb-8">
+                        <div class="w-20 h-20 bg-red-600 text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto">
+                            3
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Track & Improve</h3>
+                    <p class="text-gray-600">
+                        Monitor your progress with detailed analytics. Your AI coaches adapt your training 
+                        as you improve, ensuring continuous growth.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Demo Video CTA -->
+            <div class="text-center mt-16">
+                <button class="bg-gray-900 text-white px-8 py-4 rounded-lg hover:bg-gray-800 transition-colors inline-flex items-center space-x-3">
+                    <i class="fas fa-play-circle text-2xl"></i>
+                    <span class="font-medium text-lg">Watch 2-Minute Demo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 px-4 bg-gray-100">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Real Results from
+                    <span class="gradient-text">Real Boxers</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Join thousands of boxers who have transformed their skills with Oracle Boxing AI
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "The Technical Master AI completely transformed my jab. I went from amateur to competing 
+                        at regional level in just 6 months. The real-time feedback is game-changing!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <p class="font-bold">Marcus Johnson</p>
+                            <p class="text-sm text-gray-600">Amateur Boxer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "As a busy professional, the flexible training schedule is perfect. The Motivational Coach 
+                        keeps me accountable and I've never been in better shape."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <p class="font-bold">Sarah Chen</p>
+                            <p class="text-sm text-gray-600">Fitness Enthusiast</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex mb-4">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">
+                        "The injury prevention focus of the Safety Expert has been crucial. I'm training harder 
+                        than ever but haven't had a single injury since starting."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4"></div>
+                        <div>
+                            <p class="font-bold">Diego Rodriguez</p>
+                            <p class="text-sm text-gray-600">Professional Fighter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Success Metrics -->
+            <div class="mt-16 bg-red-600 rounded-2xl p-8 md:p-12 text-white">
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="text-5xl font-bold mb-2">87%</div>
+                        <p class="text-red-100">Improved technique in first month</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold mb-2">3x</div>
+                        <p class="text-red-100">Faster skill development</p>
+                    </div>
+                    <div>
+                        <div class="text-5xl font-bold mb-2">92%</div>
+                        <p class="text-red-100">Would recommend to others</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                    Choose Your
+                    <span class="gradient-text">Training Plan</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Start with a free trial and upgrade anytime. All plans include access to all AI coaches.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Free Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                        <p class="text-gray-600 mb-6">Perfect for beginners</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$0</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <a href="/index.html" class="block w-full bg-gray-900 text-white text-center py-3 rounded-lg hover:bg-gray-800 transition-colors font-medium">
+                            Start Free Trial
+                        </a>
+                    </div>
+                    <div class="bg-gray-50 p-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Basic AI coaching</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>5 sessions per month</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Progress tracking</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-gray-400 mr-3"></i>
+                                <span>All AI coaches</span>
+                            </li>
+                            <li class="flex items-center text-gray-400">
+                                <i class="fas fa-times text-gray-400 mr-3"></i>
+                                <span>Custom training plans</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="bg-gradient-to-br from-red-600 to-red-700 text-white rounded-xl shadow-2xl overflow-hidden transform scale-105">
+                    <div class="p-8">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-2xl font-bold">Professional</h3>
+                            <span class="bg-white/20 text-white px-3 py-1 rounded-full text-sm">Most Popular</span>
+                        </div>
+                        <p class="text-red-100 mb-6">For serious boxers</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$29</span>
+                            <span class="text-red-100">/month</span>
+                        </div>
+                        <a href="/index.html" class="block w-full bg-white text-red-600 text-center py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium">
+                            Start Pro Trial
+                        </a>
+                    </div>
+                    <div class="bg-red-800/30 p-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-3"></i>
+                                <span>All AI coaches</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-3"></i>
+                                <span>Unlimited sessions</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-3"></i>
+                                <span>Custom training plans</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-3"></i>
+                                <span>Advanced analytics</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-white mr-3"></i>
+                                <span>Priority support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Elite Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Elite</h3>
+                        <p class="text-gray-600 mb-6">For professionals & gyms</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-bold">$99</span>
+                            <span class="text-gray-600">/month</span>
+                        </div>
+                        <a href="/index.html" class="block w-full bg-gray-900 text-white text-center py-3 rounded-lg hover:bg-gray-800 transition-colors font-medium">
+                            Contact Sales
+                        </a>
+                    </div>
+                    <div class="bg-gray-50 p-8">
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Everything in Pro</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Multiple user accounts</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Gym management tools</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Custom AI training</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-3"></i>
+                                <span>Dedicated support</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Money Back Guarantee -->
+            <div class="text-center mt-12">
+                <div class="inline-flex items-center space-x-2 bg-green-100 text-green-800 px-6 py-3 rounded-full">
+                    <i class="fas fa-shield-alt"></i>
+                    <span class="font-medium">30-Day Money Back Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 px-4 bg-gradient-to-r from-red-600 to-red-700 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Ready to Transform Your Boxing?
+            </h2>
+            <p class="text-xl text-red-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of boxers already training with Oracle Boxing AI. 
+                Start your free trial today and experience the future of boxing training.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="/index.html" class="bg-white text-red-600 px-8 py-4 rounded-lg hover:bg-gray-100 transition-colors font-medium text-lg inline-flex items-center justify-center">
+                    Start Free Trial
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="#pricing" class="bg-red-700 text-white px-8 py-4 rounded-lg hover:bg-red-800 transition-colors font-medium text-lg inline-flex items-center justify-center">
+                    View Pricing Plans
+                </a>
+            </div>
+            
+            <!-- Trust Badge -->
+            <div class="mt-12 flex items-center justify-center space-x-8">
+                <div class="text-center">
+                    <i class="fas fa-lock text-3xl mb-2"></i>
+                    <p class="text-sm">Secure & Private</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-medal text-3xl mb-2"></i>
+                    <p class="text-sm">Trusted by Pros</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-headset text-3xl mb-2"></i>
+                    <p class="text-sm">24/7 Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-fist-raised text-white text-xl"></i>
+                        </div>
+                        <span class="font-rajdhani font-bold text-2xl">Oracle Boxing AI</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Transform your boxing journey with AI-powered coaching. Train smarter, improve faster.
+                    </p>
+                </div>
+                
+                <!-- Product Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
+                        <li><a href="#coaches" class="hover:text-white transition-colors">AI Coaches</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Mobile App</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Company Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    © 2024 Oracle Boxing AI. All rights reserved.
+                </p>
+                
+                <!-- Social Links -->
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-facebook text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-lg');
+            } else {
+                nav.classList.remove('shadow-lg');
+            }
+        });
+        
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all feature cards and sections
+        document.querySelectorAll('.feature-card, section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+    
+    <!-- Animations -->
+    <style>
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-fade-in {
+            animation: fade-in 0.6s ease-out forwards;
+        }
+    </style>
+</body>
+</html>

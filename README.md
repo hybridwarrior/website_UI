@@ -4,6 +4,7 @@ A modern, responsive web interface for the Oracle Boxing AI coaching platform. T
 
 ## 🥊 Features
 
+- **Professional Landing Page**: Compelling marketing page showcasing all features
 - **AI-Powered Coaching**: Multiple AI coach personas for different training aspects
 - **Real-time Chat Interface**: Interactive coaching sessions with typing indicators
 - **Progress Tracking**: Monitor your boxing journey with detailed analytics
@@ -24,6 +25,9 @@ cd website_UI
 ./demo.sh
 
 # Open http://localhost:8000 in your browser
+
+# View landing page at http://localhost:8000/landing.html
+# View app at http://localhost:8000/index.html
 ```
 
 ### Production Deployment
@@ -36,19 +40,22 @@ For integration with the Oracle Boxing Coach Flask backend, see [PRODUCTION_DEPL
 
 ```
 website_UI/
-├── index.html              # Main entry point
+├── index.html              # Main app entry point
+├── landing.html            # Marketing landing page
 ├── src/
 │   ├── js/                # Core JavaScript files
 │   │   ├── api.js         # API client
 │   │   ├── auth.js        # Authentication manager
 │   │   ├── router.js      # SPA routing
+│   │   ├── landing.js     # Landing page interactions
 │   │   └── ...
 │   ├── components/        # UI components
 │   │   ├── dashboard.js   # Dashboard view
 │   │   ├── chat.js        # Chat interface
 │   │   └── ...
 │   └── styles/            # CSS files
-│       └── main.css       # Custom styles
+│       ├── main.css       # App styles
+│       └── landing.css    # Landing page styles
 ├── demo.sh                # Local demo launcher
 └── test.html             # Test page
 ```
