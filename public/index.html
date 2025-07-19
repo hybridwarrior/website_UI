@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oracle Boxing Coach AI - Professional Boxing Training</title>
+    
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+    
+    <!-- CSS Framework and Custom Styles -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="/src/styles/main.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags for SEO and social sharing -->
+    <meta name="description" content="Professional AI-powered boxing coaching. Learn techniques, track progress, and train with expert guidance from Oracle Boxing Coach AI.">
+    <meta name="keywords" content="boxing training, AI coach, boxing techniques, fitness, martial arts">
+    <meta property="og:title" content="Oracle Boxing Coach AI">
+    <meta property="og:description" content="Professional AI-powered boxing coaching platform">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+<body class="font-inter bg-gray-50 antialiased">
+    <!-- App Container -->
+    <div id="app" class="min-h-screen flex flex-col">
+        <!-- Header Component -->
+        <header id="header-container"></header>
+        
+        <!-- Main Content Area -->
+        <main class="flex-1">
+            <!-- Page Content Container -->
+            <div id="page-container" class="container mx-auto px-4 py-6">
+                <!-- Login Page (Initial View) -->
+                <div id="login-page" class="page-content active">
+                    <!-- Login content will be loaded here -->
+                </div>
+                
+                <!-- Registration Page -->
+                <div id="register-page" class="page-content hidden">
+                    <!-- Registration content will be loaded here -->
+                </div>
+                
+                <!-- Dashboard/Initial Message Screen -->
+                <div id="dashboard-page" class="page-content hidden">
+                    <!-- Dashboard content will be loaded here -->
+                </div>
+                
+                <!-- Chat Interface -->
+                <div id="chat-page" class="page-content hidden">
+                    <!-- Chat content will be loaded here -->
+                </div>
+                
+                <!-- Task List Interface -->
+                <div id="tasks-page" class="page-content hidden">
+                    <!-- Tasks content will be loaded here -->
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer Component -->
+        <footer id="footer-container"></footer>
+    </div>
+    
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white rounded-lg p-6 flex items-center space-x-3">
+            <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-red-600"></div>
+            <span class="text-gray-700 font-medium">Loading...</span>
+        </div>
+    </div>
+    
+    <!-- Toast Notifications -->
+    <div id="toast-container" class="fixed top-4 right-4 z-50 space-y-2"></div>
+    
+    <!-- JavaScript -->
+    <script src="/src/js/utils.js"></script>
+    <script src="/src/js/api.js"></script>
+    <script src="/src/js/auth.js"></script>
+    <script src="/src/js/components.js"></script>
+    <script src="/src/js/router.js"></script>
+    <script src="/src/components/chat-complete.js"></script>
+    <script src="/src/js/app.js"></script>
+</body>
+</html>

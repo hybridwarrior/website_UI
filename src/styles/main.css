@@ -1,0 +1,326 @@
+/* Oracle Boxing Coach AI - Main CSS */
+
+/* Custom Font Families */
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-rajdhani { font-family: 'Rajdhani', sans-serif; }
+
+/* Custom Colors */
+:root {
+    --primary-red: #DC2626;
+    --primary-red-dark: #B91C1C;
+    --primary-red-light: #FEE2E2;
+    --secondary-gray: #1F2937;
+    --accent-gold: #F59E0B;
+    --success-green: #10B981;
+    --warning-yellow: #F59E0B;
+    --error-red: #EF4444;
+    --boxing-red: #C41E3A;
+    --boxing-gold: #FFD700;
+}
+
+/* Global Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    min-height: 100vh;
+}
+
+/* Page Transitions */
+.page-content {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.page-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Button Styles */
+.btn-primary {
+    @apply bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5;
+}
+
+.btn-secondary {
+    @apply bg-gray-600 hover:bg-gray-700 text-white font-medium py-2 px-4 rounded-lg shadow hover:shadow-lg transition-all duration-200;
+}
+
+.btn-outline {
+    @apply border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white font-medium py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+.btn-ghost {
+    @apply text-gray-600 hover:text-red-600 hover:bg-red-50 font-medium py-2 px-4 rounded-lg transition-all duration-200;
+}
+
+/* Form Input Styles */
+.form-input {
+    @apply w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200 bg-white;
+}
+
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-label {
+    @apply block text-sm font-semibold text-gray-700 mb-2;
+}
+
+.form-error {
+    @apply text-red-600 text-sm mt-1 block;
+}
+
+/* Card Styles */
+.card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100;
+}
+
+.card-boxing {
+    background: linear-gradient(135deg, #ffffff 0%, #fef7f7 100%);
+    border-left: 4px solid var(--boxing-red);
+}
+
+/* Hero Section */
+.hero-gradient {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #1f2937 100%);
+}
+
+.hero-boxing {
+    background: linear-gradient(135deg, 
+        rgba(31, 41, 55, 0.95) 0%, 
+        rgba(196, 30, 58, 0.1) 50%, 
+        rgba(31, 41, 55, 0.95) 100%
+    ), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="boxing-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23boxing-pattern)"/></svg>');
+}
+
+/* Chat Interface Styles */
+.chat-container {
+    height: calc(100vh - 200px);
+    max-height: 600px;
+}
+
+.chat-message {
+    @apply mb-4 flex;
+}
+
+.chat-message.user {
+    @apply justify-end;
+}
+
+.chat-message.ai {
+    @apply justify-start;
+}
+
+.chat-bubble {
+    @apply max-w-xs lg:max-w-md px-4 py-3 rounded-lg shadow;
+}
+
+.chat-bubble.user {
+    @apply bg-red-600 text-white rounded-br-none;
+}
+
+.chat-bubble.ai {
+    @apply bg-white text-gray-800 border border-gray-200 rounded-bl-none;
+}
+
+.chat-input-container {
+    @apply border-t border-gray-200 bg-white p-4;
+}
+
+/* Task List Styles */
+.task-item {
+    @apply bg-white border border-gray-200 rounded-lg p-4 mb-3 hover:shadow-md transition-all duration-200;
+}
+
+.task-item.completed {
+    @apply bg-green-50 border-green-200;
+}
+
+.task-item.in-progress {
+    @apply bg-yellow-50 border-yellow-200;
+}
+
+.task-priority-high {
+    @apply border-l-4 border-red-500;
+}
+
+.task-priority-medium {
+    @apply border-l-4 border-yellow-500;
+}
+
+.task-priority-low {
+    @apply border-l-4 border-green-500;
+}
+
+/* Progress Indicators */
+.progress-circle {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+    transition: stroke-dashoffset 0.6s ease-in-out;
+}
+
+/* Boxing Theme Elements */
+.boxing-glove-icon::before {
+    content: "🥊";
+    font-size: 1.2em;
+    margin-right: 0.5rem;
+}
+
+.victory-animation {
+    animation: victory-pulse 2s infinite;
+}
+
+@keyframes victory-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        height: calc(100vh - 160px);
+    }
+    
+    .chat-bubble {
+        @apply max-w-xs;
+    }
+    
+    .hero-text {
+        @apply text-2xl;
+    }
+}
+
+/* Loading States */
+.skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Toast Notifications */
+.toast {
+    @apply bg-white shadow-lg rounded-lg p-4 border-l-4 transform transition-all duration-300 max-w-sm;
+}
+
+.toast.success {
+    @apply border-green-500;
+}
+
+.toast.error {
+    @apply border-red-500;
+}
+
+.toast.warning {
+    @apply border-yellow-500;
+}
+
+.toast.info {
+    @apply border-blue-500;
+}
+
+/* Custom Scrollbars */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Header Styles */
+.header-shadow {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Footer Styles */
+.footer-gradient {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+}
+
+/* Authentication Forms */
+.auth-container {
+    min-height: calc(100vh - 140px);
+}
+
+.auth-card {
+    @apply bg-white rounded-xl shadow-2xl border border-gray-100 overflow-hidden;
+    max-width: 420px;
+}
+
+.auth-form {
+    @apply p-8;
+}
+
+.auth-header {
+    @apply text-center mb-8;
+}
+
+.auth-title {
+    @apply text-3xl font-bold text-gray-900 mb-2 font-rajdhani;
+}
+
+.auth-subtitle {
+    @apply text-gray-600 text-base;
+}
+
+/* Dashboard Styles */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.stat-card {
+    @apply bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300;
+}
+
+.stat-icon {
+    @apply w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center text-xl mb-4;
+}
+
+/* Mobile Navigation */
+.mobile-menu {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu.open {
+    transform: translateX(0);
+}
+
+/* Utility Classes */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.glass-effect {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.boxing-gradient {
+    background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+}
+
+.gold-gradient {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+}
